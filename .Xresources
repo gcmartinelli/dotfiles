@@ -1,0 +1,86 @@
+! special
+*.foreground:   #29ffed
+*.background:   #241140
+*.cursorColor:  #81fb3e
+
+! black
+*.color0:       #2d2d2d
+*.color8:       #747369
+
+! red
+*.color1:       #f2777a
+*.color9:       #f2777a
+
+! green
+*.color2:       #fff000
+*.color10:      #fff000
+
+! yellow
+*.color3:       #ffcc66
+*.color11:      #ffcc66
+
+! blue
+*.color4:       #4560fb
+*.color12:      #4560fb
+
+! magenta
+*.color5:       #cc99cc
+*.color13:      #cc99cc
+
+! cyan
+*.color6:       #b53edf
+*.color14:      #b53edf
+
+! white
+*.color7:       #d3d0c8
+*.color15:      #f2f0ec
+
+
+!! URxvt Appearance
+URxvt.font: xft:Mononoki:style=Regular:size=12
+URxvt.boldFont: xft:Mononoki:style=Bold:size=12
+URxvt.italicFont: xft:Mononoki:style=Italic:size=12
+URxvt.boldItalicFont: xft:Mononoki:style=Bold Italic:size=12
+URxvt.depth: 32
+URxvt.letterSpace: 0
+URxvt.lineSpace: 0
+URxvt.geometry: 92x24
+URxvt.internalBorder: 20
+URxvt.cursorBlink: true
+URxvt.cursorUnderline: false
+URxvt.saveline: 2048
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
+URxvt.urgentOnBell: true
+URxvt.iso14755: false
+URxvt.transparent: true
+URxvt.shading: 15
+URxvt.blurRadius: 10
+
+!! Xft
+Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+Xft.hintful: true
+
+!! Common Keybinds for Navigation
+URxvt.keysym.Shift-Up: command:\033]720;1\007
+URxvt.keysym.Shift-Down: command:\033]721;1\007
+URxvt.keysym.Control-Up: command:\033[1;5A
+URxvt.keysym.Control-Down: command:\033[1;5B
+URxvt.keysym.Control-Right: command:\033[1;5C
+URxvt.keysym.Control-Left: command:\033[1;5D
+
+!! Copy/Paste & Other Extensions
+URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select
+URxvt.copyCommand: xclip -i -selection clipboard
+URxvt.pasteCommand: xclip -o -selection clipboard
+URxvt.keysym.M-c: perl:clipboard:copy
+URxvt.keysym.M-v: perl:clipboard:paste
+URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+URxvt.keysym.M-Escape: perl:keyboard-select:active
+URxvt.keysym.M-s: perl:keyboard-select:search
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.url-select.launcher: firefox
+URxvt.url-select.button: 1
+URxvt.url-select.underline: true
