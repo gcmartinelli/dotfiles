@@ -99,7 +99,9 @@ layout_theme = {"border_width": 1,
 layouts = [
     layout.Max(**layout_theme),
     layout.MonadTall(**layout_theme),
-    layout.MonadWide(**layout_theme),    
+    layout.MonadWide(**layout_theme),
+	layout.Matrix(**layout_theme,
+					columns=3),    
 #    layout.Floating(float_rules=[
 #        {'wmclass': 'confirm'},
 #        {'wmclass': 'dialog'},
@@ -134,7 +136,8 @@ mouse = [
 
 group_names = [{'name':"DEV", 'layout':'monadtall'},
               {'name':"WWW", 'layout':'max', 'spawn':'firefox'},
-	        {'name':"DISC", 'layout':'max', 'matches':[Match(wm_class=['discord'])]}]
+	        {'name':"DISC", 'layout':'max', 'matches':[Match(wm_class=['discord'])]},
+			{'name':"ETC", 'layout':'matrix'}]
 
 groups = [Group(**kwargs) for kwargs in group_names]
 
@@ -170,7 +173,7 @@ screens = [
             margin_y = 0,
             margin_x = 0,
             padding_y = 7,
-            padding_x = 7,
+            padding_x = 10,
             borderwitdh = 1,
             active = colors[2],
             inactive = colors[3],
