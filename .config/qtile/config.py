@@ -31,8 +31,8 @@ keys = [
     # Move windows up or down in current stack
     Key([mod, "control"], "k", lazy.layout.shuffle_down()),
     Key([mod, "control"], "j", lazy.layout.shuffle_up()),
-    Key([mod], "Left", lazy.layout.shuffle_down()),
-    Key([mod], "Right", lazy.layout.shuffle_up()),
+    Key([mod], "Right", lazy.layout.shuffle_down()),
+    Key([mod], "Left", lazy.layout.shuffle_up()),
         
     # Change size of focus window
     Key([mod], "Up", lazy.layout.grow()),
