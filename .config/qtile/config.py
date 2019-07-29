@@ -71,7 +71,14 @@ keys.extend([
     Key([mod], "e", lazy.spawn("urxvtc -e ranger %s" % (HOMEDIR))),
 ])
 
-
+# Multimedia Keys
+keys.extend([
+	Key([], "XF86AudioMute", lazy.spawn("amixer set Master toggle")),
+	Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer set Master 15+")),
+	Key([], "XF86AudioLowerVolume", lazy.spawn("amixer set Master 15-")),
+	Key([], "XF86MonBrightnessDown", lazy.spawn("xbacklight -dec 15")),
+	Key([], "XF86MonBrightnessUp", lazy.spawn("xbacklight -inc 15"))
+])
 '''
 ### COLORS
 '''
@@ -135,7 +142,7 @@ mouse = [
 '''
 
 group_names = [{'name':"DEV", 'layout':'monadtall'},
-              {'name':"WWW", 'layout':'max', 'spawn':'firefox'},
+              {'name':"WWW", 'layout':'max'},
 	        {'name':"DISC", 'layout':'max', 'matches':[Match(wm_class=['discord'])]},
 			{'name':"ETC", 'layout':'matrix'}]
 
@@ -151,7 +158,7 @@ for i, group in enumerate(groups, 1):
 '''
 
 widget_defaults = dict(
-    font = 'iosevka',
+    font = "mononoki",
     fontsize = 15,
     padding = 2,
     background = colors[0],
@@ -198,7 +205,7 @@ screens = [
 					padding = 20,
 					foreground = colors[1],
 					background = colors[0]),
-        widget.Volume(volume_app="urxvtc -e amixer",
+        widget.Volume(volume_app="amixer",
             mute_command="Master toggle",
             volume_down_command="set Master 2%-",
             volume_up_command="set Master 2%+"),
