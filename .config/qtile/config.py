@@ -82,9 +82,10 @@ keys.extend([
 '''
 
 colors = [
-	"1e1c2c", #top bar background
-	"26d2bb", #top bar foreground
-	"fcfcfc", #group active (leters)
+	"20201d", #top bar background
+	#"26d2bb", #top bar foreground
+	"1fad83", #top bar foreground
+	"f3fbec", #group active (leters)
 	"fcfcfc", #group inactive (leters)
 	"26d2bb", #search background
 	"1e1c2c", #search foreground
@@ -164,7 +165,7 @@ def init_widgets_list():
 									fontsize = 10,
 									margin_y = 0,
 									margin_x = 0,
-									padding_y = 7,
+									padding_y = 8,
 									padding_x = 10,
 									borderwitdh = 1,
 									active = colors[2],
@@ -180,21 +181,26 @@ def init_widgets_list():
 									padding = 6,
 									foreground = colors[1],
 									background = colors[0]),
+
 					widget.Prompt(prompt=prompt,
 									background = colors[4],
 									foreground = colors[5]),
+
 					widget.WindowName(foreground = colors[1]),
+
 					widget.Systray(padding = 9,
 									icon_size = 20),
 					widget.Sep(linewidth = 0,
 									padding = 20,
 									foreground = colors[1],
 									background = colors[0]),
+
 					widget.CurrentLayout(font="mononoki"),
 					widget.Sep(linewidth = 0,
 									padding = 20,
 									foreground = colors[1],
 									background = colors[0]),
+
 					widget.Image(filename=HOMEDIR+"/Pictures/icons/whitepng/refresh-cw.png"),
 					widget.Sep(linewidth = 0,
 									padding = 5,
@@ -205,9 +211,16 @@ def init_widgets_list():
 									padding = 20,
 									foreground = colors[1],
 									background = colors[0]),
+
+					widget.Image(filename=HOMEDIR+"/Pictures/icons/whitepng/wifi.png"),
+					widget.Sep(linewidth = 0,
+									padding = 5,
+									foreground = colors[1],
+									background = colors[0]),
 					widget.Wlan(interface='wlp58s0',
 								font="mononoki",
-								format="WLAN: {quality}/70"),
+								format="{quality}/70"),
+
 					widget.Sep(linewidth = 0,
 									padding = 20,
 									foreground = colors[1],
@@ -221,11 +234,13 @@ def init_widgets_list():
 									padding = 20,
 									foreground = colors[1],
 									background = colors[0]),
+
 					widget.BatteryIcon(theme_path=HOMEDIR+'/Pictures/icons/battery/'),
 					widget.Sep(linewidth = 0,
 									padding = 20,
 									foreground = colors[1],
 									background = colors[0]),
+
 					widget.Image(filename=HOMEDIR+"/Pictures/icons/whitepng/clock.png"),
 					widget.Clock(format='%d-%b %a %H:%M'),
 					widget.Sep(linewidth = 0,
