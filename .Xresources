@@ -1,59 +1,59 @@
+!! URxvt Appearance
+URxvt*font: xft:ShureTechMono Nerd Font 
+!!xft:Lekton Nerd Font
+URxvt*depth: 32
+URxvt*letterSpace: 0
+URxvt*lineSpace: 0
+URxvt*geometry: 92x24
+URxvt*internalBorder: 20
+URxvt*cursorBlink: true
+URxvt*cursorUnderline: false
+URxvt*saveline: 2048
+URxvt*scrollBar: false
+URxvt*scrollBar_right: false
+URxvt*urgentOnBell: true
+URxvt*iso14755: false
+URxvt*transparent: true
+URxvt*shading: 15
+URxvt*blurRadius: 10
+
 ! special
-*.foreground:   #29ffed
-*.background:   #241140
-*.cursorColor:  #81fb3e
+*.foreground:   #a9a79f
+*.background:   #20201d
+*.cursorColor:  #a6a28c
 
 ! black
-*.color0:       #2d2d2d
-*.color8:       #747369
+*.color0:       #20201d
+*.color8:       #7a7971
 
 ! red
-*.color1:       #f2777a
-*.color9:       #f2777a
+*.color1:       #d73737
+*.color9:       #d73737
 
 ! green
-*.color2:       #fff000
-*.color10:      #fff000
+*.color2:       #60ac39
+*.color10:      #60ac39
 
 ! yellow
-*.color3:       #ffcc66
-*.color11:      #ffcc66
+*.color3:       #cfb017
+*.color11:      #cfb017
 
 ! blue
-*.color4:       #4560fb
-*.color12:      #4560fb
+*.color4:       #6684e1
+*.color12:      #6684e1
 
 ! magenta
-*.color5:       #cc99cc
-*.color13:      #cc99cc
+*.color5:       #b854d4
+*.color13:      #b854d4
 
 ! cyan
-*.color6:       #b53edf
-*.color14:      #b53edf
+*.color6:       #1fad83
+*.color14:      #1fad83
 
 ! white
-*.color7:       #d3d0c8
-*.color15:      #f2f0ec
+*.color7:       #a6a28c
+*.color15:      #fefbec
 
-
-!! URxvt Appearance
-URxvt.font: xft:mononoki Nerd Font Mono:size=11, \
-	    	xft:iosevka:size=11
-URxvt.depth: 32
-URxvt.letterSpace: 0
-URxvt.lineSpace: 0
-URxvt.geometry: 92x24
-URxvt.internalBorder: 20
-URxvt.cursorBlink: true
-URxvt.cursorUnderline: false
-URxvt.saveline: 2048
-URxvt.scrollBar: false
-URxvt.scrollBar_right: false
-URxvt.urgentOnBell: true
-URxvt.iso14755: false
-URxvt.transparent: true
-URxvt.shading: 15
-URxvt.blurRadius: 10
 
 !! Xft
 Xft.dpi: 96

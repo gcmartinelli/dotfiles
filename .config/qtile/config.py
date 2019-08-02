@@ -143,7 +143,7 @@ for i, group in enumerate(groups, 1):
 '''
 
 widget_defaults = dict(
-	font = "mononoki",
+	font = "ShureTechMono Nerd Font",
 	fontsize = 15,
 	padding = 2,
 	background = colors[0],
@@ -151,21 +151,14 @@ widget_defaults = dict(
 
 extension_defaults = widget_defaults.copy()
 
-
-def init_widgets_defaults():
-	return dict(font = "mononoki",
-				fontsize = 15,
-				padding = 2,
-				background = colors[0])
-
 def init_widgets_list():
 	prompt = "{0}@{1}: ".format(os.environ["USER"], socket.gethostname())
 	widgets_list = [widget.Sep(linewidth = 0, padding = 6, foreground = colors[1], background = colors[0]),	
-					widget.GroupBox(font='Ubuntu Mono Bold',
-									fontsize = 10,
+					widget.GroupBox(font='ShureTechMono Nerd Font',
+									fontsize = 12,
 									margin_y = 0,
 									margin_x = 0,
-									padding_y = 8,
+									padding_y = 5,
 									padding_x = 10,
 									borderwitdh = 1,
 									active = colors[2],
@@ -195,7 +188,7 @@ def init_widgets_list():
 									foreground = colors[1],
 									background = colors[0]),
 
-					widget.CurrentLayout(font="mononoki"),
+					widget.CurrentLayout(font="ShureTechMono Nerd Font"),
 					widget.Sep(linewidth = 0,
 									padding = 20,
 									foreground = colors[1],
@@ -206,7 +199,7 @@ def init_widgets_list():
 									padding = 5,
 									foreground = colors[1],
 									background = colors[0]),
-					widget.Pacman(font="mononoki"),	
+					widget.Pacman(font="ShureTechMono Nerd Font"),	
 					widget.Sep(linewidth = 0,
 									padding = 20,
 									foreground = colors[1],
@@ -218,7 +211,7 @@ def init_widgets_list():
 									foreground = colors[1],
 									background = colors[0]),
 					widget.Wlan(interface='wlp58s0',
-								font="mononoki",
+								font="ShureTechMono Nerd Font ",
 								format="{quality}/70"),
 
 					widget.Sep(linewidth = 0,
