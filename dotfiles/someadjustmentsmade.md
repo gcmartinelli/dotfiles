@@ -1,4 +1,4 @@
-### Some of the tweaks I had to make to the XPS 13 (9350) to run Arch
+### Some of the tweaks I had to make for the XPS 13 (9350) to run Arch
 
 * Enabled touchpad 'tapping' using an Xorg config file (below)
 * Used `xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'` to track multimedia keys that were not working
