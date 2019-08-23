@@ -22,7 +22,6 @@ def autostart():
 '''
 ### MONITORS
 '''
-os.system('mons -e left')
 os.system('mons --primary DP-1')
 
 '''
@@ -94,7 +93,7 @@ keys.extend([
 	Key([mod], "d", lazy.spawn("discord")),
 	Key([mod], "f", lazy.spawn("firefox")),
 	Key([mod], "a", lazy.spawn("urxvtc -e alsamixer")),
-	Key([mod], "Return", lazy.spawn("urxvtc")),
+	Key([mod], "Return", lazy.spawn("urxvt")),
 	Key([mod], "e", lazy.spawn("urxvtc -e ranger %s" % (HOMEDIR))),
 	])
 	
@@ -143,7 +142,7 @@ mouse = [
 
 group_names = [{'name':"DEV", 'layout':'monadtall'},
 		  {'name':"WWW", 'layout':'max'},
-		{'name':"DISC", 'layout':'max', 'matches':[Match(wm_class=['discord'])]},
+		{'name':"TOR", 'layout':'max', 'matches':[Match(wm_class=['disbord'])]},
 		{'name':"ETC", 'layout':'columns'}]
 
 groups = [Group(**kwargs) for kwargs in group_names]
@@ -193,10 +192,22 @@ def init_widgets_list():
 								background=colors[0]),
 					widget.Prompt(prompt=prompt,
 								background=colors[4],
-								foreground=colors[5]),
+								foreground=colors[15]),
 					widget.WindowName(foreground=colors[7]),
 					widget.Systray(padding=9,
 								icon_size=20),
+					widget.Sep(linewidth=0,
+								padding=20,
+								foreground=colors[1],
+								background=colors[0]),
+					widget.CPUGraph(graph_color=colors[5],
+									border_color=colors[1],
+									fill_color=colors[5],
+									border_width=1),
+					widget.MemoryGraph(graph_color=colors[3],
+									border_color=colors[1],
+									fill_color=colors[3],
+									border_width=1),
 					widget.Sep(linewidth=0,
 								padding=20,
 								foreground=colors[1],

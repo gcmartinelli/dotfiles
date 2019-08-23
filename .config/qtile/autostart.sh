@@ -1,4 +1,3 @@
 #!/bin/sh
-
-urxvtd -q -o -f &							#URXVTD Daemon
-light-locker &								#Screen locker
+light-locker &			#Screen locker
+compton -b &			#Compton (solve screen tearing issues)
