@@ -1,5 +1,6 @@
 !! URxvt Appearance
-URxvt*font: xft:ShureTechMono Nerd Font:size=12
+!!URxvt*font: xft:ShureTechMono Nerd Font:size=12
+URxvt*font: xft:UbuntuMono Nerd Font:size=12
 !!xft:Lekton Nerd Font
 URxvt*depth: 32
 URxvt*letterSpace: 0
@@ -14,8 +15,8 @@ URxvt*scrollBar_right: false
 URxvt*urgentOnBell: true
 URxvt*iso14755: false
 URxvt*transparent: true 
-URxvt*shading: 35
-URxvt*blurRadius: 30
+URxvt*shading: 15
+!!URxvt*blurRadius: 3
 
 ! special
 *.foreground:   #a9a79f
