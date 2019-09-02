@@ -29,7 +29,7 @@ os.system('mons --primary DP-1')
 '''
 def pallete_init():
 	image = pywal.image.get(f"{HOMEDIR}/Pictures/wallpapers")
-	colors = pywal.colors.get(image, sat=0.6)
+	colors = pywal.colors.get(image, sat=0.65)
 	pywal.sequences.send(colors)
 	pywal.export.every(colors)
 	pywal.reload.env()
@@ -91,7 +91,8 @@ keys.extend([
 	Key([mod], "t", lazy.spawn(f"import {HOMEDIR}/Pictures/screenshots/{int(time.time())}.png")),
 	Key([mod], "h", lazy.spawn("urxvtc -e htop")),
 	Key([mod], "d", lazy.spawn("discord")),
-	Key([mod], "f", lazy.spawn("firefox")),
+	Key([mod], "f", lazy.spawn("firefox-developer-edition")),
+	Key([mod, "shift"], "f", lazy.spawn("chromium")),
 	Key([mod], "a", lazy.spawn("urxvtc -e alsamixer")),
 	Key([mod], "Return", lazy.spawn("urxvt")),
 	Key([mod], "e", lazy.spawn("urxvtc -e ranger %s" % (HOMEDIR))),
@@ -241,6 +242,11 @@ def init_widgets_list():
 								background=colors[0]),
 					widget.BatteryIcon(theme_path=HOMEDIR+'/Pictures/icons/battery/',
 									background=colors[0]),
+					widget.Sep(linewidth=0,
+								padding=20,
+								foreground=colors[1],
+								background=colors[0]),
+					widget.KeyboardLayout(configured_keyboards=['us', 'us alt-intl']),
 					widget.Sep(linewidth=0,
 								padding=20,
 								foreground=colors[1],
