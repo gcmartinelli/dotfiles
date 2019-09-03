@@ -23,6 +23,7 @@ def autostart():
 ### MONITORS
 '''
 os.system('mons --primary DP-1')
+os.system('mons -e right')
 
 '''
 ### COLORS
