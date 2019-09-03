@@ -91,7 +91,7 @@ keys.extend([
 	Key([mod], "t", lazy.spawn(f"import {HOMEDIR}/Pictures/screenshots/{int(time.time())}.png")),
 	Key([mod], "h", lazy.spawn("urxvtc -e htop")),
 	Key([mod], "d", lazy.spawn("discord")),
-	Key([mod], "f", lazy.spawn("firefox-developer-edition")),
+	Key([mod], "f", lazy.spawn("firefox")),
 	Key([mod, "shift"], "f", lazy.spawn("chromium")),
 	Key([mod], "a", lazy.spawn("urxvtc -e alsamixer")),
 	Key([mod], "Return", lazy.spawn("urxvt")),
