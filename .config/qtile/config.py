@@ -136,8 +136,8 @@ keys.extend([
 ''' 
 
 layout_theme = {"border_width": 1,
-	"margin": 5,
-	"single_margin": 5,
+	"margin": 2,
+	"single_margin": 2,
 	"border_focus": colors[11],
 	"border_normal": colors[1]}
 
