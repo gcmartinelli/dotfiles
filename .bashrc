@@ -16,3 +16,6 @@ fi
 
 # Activate pywal for theme
 (cat ~/.cache/wal/sequences &)
+
+# For IntelliJ IDEA to work
+export _JAVA_AWT_WM_NONREPARENTING=1
