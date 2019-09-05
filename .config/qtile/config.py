@@ -102,7 +102,7 @@ keys = [
 	Key([mod, "control"], "r", lazy.restart()),
 	Key([mod, "control"], "q", lazy.shutdown()),
 	Key([mod], "r", lazy.spawncmd()),
-	Key([mod], "l",lazy.spawn("light-locker-command -l")),
+	Key([mod], "x",lazy.spawn("light-locker-command -l")),
 	
 	# Display control
 	Key([mod, "control"], "Tab", lazy.spawn("mons -n left")),
