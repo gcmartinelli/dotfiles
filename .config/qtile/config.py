@@ -112,7 +112,7 @@ keys = [
 	# Program Shortcuts
 keys.extend([
 	Key([mod, "control"], "t", lazy.spawn(f"import {HOMEDIR}/Pictures/screenshots/{int(time.time())}.png")),
-	Key([mod], "h", lazy.spawn("urxvtc -e htop")),
+#	Key([mod], "h", lazy.spawn("urxvtc -e htop")),
 	Key([mod], "d", lazy.spawn("discord")),
 	Key([mod], "f", lazy.spawn("chromium")),
 	Key([mod, "shift"], "f", lazy.spawn("chromium")),
