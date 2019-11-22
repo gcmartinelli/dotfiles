@@ -102,16 +102,20 @@ keys = [
 	Key([mod, "control"], "r", lazy.restart()),
 	Key([mod, "control"], "q", lazy.shutdown()),
 	Key([mod], "r", lazy.spawncmd()),
-	Key([mod], "x",lazy.spawn("light-locker-command -l")),
+#	Key([mod], "x",lazy.spawn("light-locker-command -l")),
+	Key([mod], "x",lazy.spawn("dm-tool switch-to-greeter")),
 	
 	# Display control
 	Key([mod, "control"], "Tab", lazy.spawn("mons -n left")),
 	]
 	
-	
+
+def new_screenshot_name():
+	return str(int(time.time()))+'.png'
+
 	# Program Shortcuts
 keys.extend([
-	Key([mod, "control"], "t", lazy.spawn(f"import {HOMEDIR}/Pictures/screenshots/{int(time.time())}.png")),
+	Key([mod, "control"], "t", lazy.spawn(f"import {HOMEDIR}/Pictures/screenshots/{new_screenshot_name()}")),
 #	Key([mod], "h", lazy.spawn("urxvtc -e htop")),
 	Key([mod], "d", lazy.spawn("discord")),
 	Key([mod], "f", lazy.spawn("chromium")),
@@ -225,18 +229,18 @@ def init_widgets_list():
 								padding=20,
 								foreground=colors[1],
 								background=colors[0]),
-					widget.CPUGraph(graph_color=colors[5],
-									border_color=colors[1],
-									fill_color=colors[5],
-									border_width=1),
-					widget.MemoryGraph(graph_color=colors[3],
-									border_color=colors[1],
-									fill_color=colors[3],
-									border_width=1),
-					widget.Sep(linewidth=0,
-								padding=20,
-								foreground=colors[1],
-								background=colors[0]),
+				#	widget.CPUGraph(graph_color=colors[5],
+				#					border_color=colors[1],
+				#					fill_color=colors[5],
+				#					border_width=1),
+				#	widget.MemoryGraph(graph_color=colors[3],
+				#					border_color=colors[1],
+				#					fill_color=colors[3],
+				#					border_width=1),
+				#	widget.Sep(linewidth=0,
+				#				padding=20,
+				#				foreground=colors[1],
+				#				background=colors[0]),
 					widget.CurrentLayout(font="ShureTechMono Nerd Font"),
 					widget.Sep(linewidth=0,
 								padding=20,
@@ -258,8 +262,8 @@ def init_widgets_list():
 					widget.Volume(theme_path=HOMEDIR+"/Pictures/icons/whitepng/volume",
 								volume_app="amixer",
 								mute_command="Master toggle",
-								volume_down_command="set Master 2%-",
-								volume_up_command="set Master 2%+"),
+								volume_down_command="set Master 1%-",
+								volume_up_command="set Master 1%+"),
 					widget.Sep(linewidth=0,
 								padding=20,
 								foreground=colors[1],
@@ -297,11 +301,11 @@ screens = init_screens()
 dgroups_key_binder = None
 dgroups_app_rules = []  # type: List
 main = None
-follow_mouse_focus = False
 bring_front_click = True
 cursor_warp = False
 
 auto_fullscreen = True
 #focus_on_window_activation = "smart"
+follow_mouse_focus = False
 
 wmname = "qtile"
